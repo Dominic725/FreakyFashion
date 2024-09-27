@@ -10,26 +10,26 @@
 
 /* UTIL */
 .nowrap {
-    white-space: nowrap;
-  }
-  /* UTIL END */
+  white-space: nowrap;
+}
+/* UTIL END */
 
 body {
   min-height: 100vh;
   background-color: rgb(93, 60, 60);
-  margin: 1em;
 }
 
 body > * {
-    margin: 1em;
+  margin: 1em;
 }
 
 .logo {
   width: clamp(200px, 100%, 400px);
 }
 
-.search, .search input {
-    width: clamp(100px, 100%, 250px);
+.search,
+.search input {
+  width: clamp(100px, 100%, 250px);
 }
 
 .searchicons {
@@ -39,7 +39,6 @@ body > * {
 }
 
 .search {
-  
   border-radius: 0.9em;
   padding: 0.2em 1.5em;
   background: url(/img/search.svg) no-repeat 7px white; /*search-icon that is positioned on the left sideo of the text field*/
@@ -51,8 +50,9 @@ body > * {
   border: none;
 }
 
-.checkoutbookmark a, img {
-    width: 40%;
+.checkoutbookmark a,
+img {
+  width: 40%;
 }
 
 .checkoutbookmark img {
@@ -61,7 +61,7 @@ body > * {
 }
 
 .checkoutbookmark img:hover {
-    background-color: rgb(65, 42, 42);
+  background-color: rgb(65, 42, 42);
 }
 
 nav {
@@ -69,11 +69,15 @@ nav {
   flex-direction: column;
 }
 
+nav li {
+  list-style: none;
+}
+
 nav a {
   text-decoration: none;
   font-weight: 600;
   color: aliceblue;
-  font-size: 1.1em;
+  font-size: 1.2rem;
   width: fit-content;
 }
 
@@ -107,9 +111,9 @@ nav a:hover {
 }
 
 .productcontainer {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }
 
 .productcontainer img {
@@ -133,42 +137,44 @@ nav a:hover {
   color: red;
 }
 
+/* product-details.html css */
 .product-details div {
-    max-width: 700px;
+  max-width: 700px;
 }
 
 .product-details > div > * {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .product-details img {
-    width: 100%;
-    border-radius: 2em;
+  width: 100%;
+  border-radius: 2em;
 }
 
 .product-details button {
-    width: 100%;
-    padding: 1em;
-    background-color: green;
+  width: 100%;
+  padding: 1em;
+  background-color: green;
 }
 
 .product-details button:active {
-    background-color: rgb(0, 112, 0);
-    transform: translateY(4px);
+  background-color: rgb(0, 112, 0);
+  transform: translateY(4px);
 }
 
 .liknande-produkter {
-    display: none;
+  display: none;
 }
 
 .liknande-produkter img {
-    width: 100%;
+  width: 100%;
 }
 
+/* Ikoner under produkterna */
 .fraktikoner div {
   display: flex;
   align-items: center;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-weight: 600;
   list-style: none;
   gap: 1em;
@@ -194,7 +200,7 @@ nav a:hover {
   border: 1px solid black;
   outline: none;
   transition: 0.4s;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .active,
@@ -225,7 +231,6 @@ footer > p {
 }
 
 @media screen and (min-width: 640px) {
-
   .searchicons {
     justify-content: space-between;
   }
@@ -236,7 +241,7 @@ footer > p {
   }
 
   nav a {
-    margin: 0.8em;
+    margin: 0.5em;
   }
 
   .productcontainer {
@@ -273,7 +278,6 @@ footer > p {
     grid-row-start: 1;
     align-self: center;
     justify-self: center;
-    
   }
 
   .fraktikoner {
@@ -287,8 +291,7 @@ footer > p {
     width: 100%;
   }
 
-  .accordionfooter,
-  .panel {
+  .accordionfooter {
     display: none;
   }
 
@@ -301,27 +304,13 @@ footer > p {
     background-color: rgb(65, 42, 42);
   }
 
-  .navfooter > div > ul > li {
+  .navfooter li {
     list-style: none;
     margin: 0.8em 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
-
-  .searchicons {
-    justify-content: space-between;
-  }
-
-  nav {
-    flex-direction: row;
-    margin: 0.5em 0;
-  }
-
-  nav a {
-    margin-right: 0.8em;
-  }
-
   .hero {
     display: flex;
     flex-direction: row-reverse;
@@ -331,21 +320,25 @@ footer > p {
   }
 
   .spots {
-    position: relative;
     display: flex;
-    justify-content: space-evenly;
-    margin: 1em 0;
+    gap: 1.5em;
+    margin: 1em;
+  }
+
+  .spots article {
+    position: relative;
+  }
+
+  .spots article h2 {
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
   }
 
   .spots img {
-    width: 30%;
-  }
-
-  .spots h2 {
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    translate: -50% -50%;
+    width: 100%;
   }
 
   .productcontainer {
@@ -361,12 +354,7 @@ footer > p {
   }
 
   .fraktikoner div {
-    width: 100%;
+    width: 90%;
     justify-content: center;
-  }
-
-  .accordionfooter,
-  .panel {
-    display: none;
   }
 }
