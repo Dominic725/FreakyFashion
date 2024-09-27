@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svart T-shirt</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/triangle-half.svg" />
+  </head>
+  <body>
+    <header>
+      <div class="logosearch">
+        <a href="/"
+          ><img class="logo" src="img/logo.png" alt="Freaky Fashion Logo"
+        /></a>
+        <div class="searchicons nowrap">
+          <div class="search">
+            <input type="text" placeholder="Sök produkt" maxlength="35" />
+          </div>
+          <div class="checkoutbookmark">
+            <a href=""><img src="img/bag-fill.svg" alt="Checkout" /></a>
+            <a href=""><img src="img/bookmark-heart.svg" alt="Favorites" /></a>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="Nyheter.html" aria-label="Nyheter">Nyheter</a>
+        <a href="Kategorier.html" aria-label="Kategorier">Kategorier</a>
+        <a href="Topplistan.html" aria-label="Topplistan">Topplistan</a>
+        <a href="Rea.html" aria-label="Rea">Rea</a>
+        <a href="Kampanjer.html" aria-label="Kampanjer">Kampanjer</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="product-details">
+        <img src="img/svart_tshirt.png" alt="Svart T-shirt" />
+        <div>
+          <h1>Svart T-shirt</h1>
+          <p>Levis</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+            hic. Enim nostrum laboriosam cupiditate rem alias quia iste non ipsa
+            excepturi tempora dolorem sapiente hic amet, unde ad eos magni
+            commodi temporibus libero maxime consequatur optio at! Ad, minima
+            ab.
+          </p>
+          <h2>199 SEK</h2>
+          <button>Lägg i varukorg</button>
+        </div>
+      </section>
+
+      <section class="liknande-produkter">
+        <h2>Liknande Produkter</h2>
+        <div class="produkt">
+          <a href="product-details.html"
+            ><img src="img/svart_tshirt.png" alt="Svart T-shirt"
+          /></a>
+          <h2>Svart T-shirt <span>199kr</span></h2>
+          <p>Levis</p>
+        </div>
+
+        <div class="produkt">
+          <a href="product-details.html"
+            ><img src="img/svart_tshirt.png" alt="Svart T-shirt"
+          /></a>
+          <h2>Svart T-shirt <span>199kr</span></h2>
+          <p>Levis</p>
+        </div>
+
+        <div class="produkt">
+          <a href="product-details.html"
+            ><img src="img/svart_tshirt.png" alt="Svart T-shirt"
+          /></a>
+          <h2>Svart T-shirt <span>199kr</span></h2>
+          <p>Levis</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <button class="accordionfooter">Shopping</button>
+      <div class="panel">
+        <ul>
+          <a href="vinterjackor.html"><li>Vinterjackor</li></a>
+          <a href="Pufferjackor.html"><li>Pufferjackor</li></a>
+          <a href="Kappor.html"><li>Kappor</li></a>
+          <a href="Trenchcoats.html"><li>Trenchcoats</li></a>
+        </ul>
+      </div>
+      <button class="accordionfooter">Mina Sidor</button>
+      <button class="accordionfooter">Kundtjänst</button>
+      <script>
+        var acc = document.getElementsByClassName("accordionfooter");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          });
+        }
+      </script>
+
+      <div class="navfooter">
+        <div>
+          <h3>Shopping</h3>
+          <ul>
+            <li>Vinterjackor</li>
+            <li>Pufferjackor</li>
+            <li>Kappa</li>
+            <li>Trenchcoats</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Mina Sidor</h3>
+          <ul>
+            <li>Mina Ordrar</li>
+            <li>Mitt Konto</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Kundtjänst</h3>
+          <ul>
+            <li>Returnpolicy</li>
+            <li>Integritetspolicy</li>
+          </ul>
+        </div>
+      </div>
+      <p>&copy;Freaky Fashion</p>
+    </footer>
+  </body>
+</html>

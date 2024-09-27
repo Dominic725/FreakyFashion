@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administration</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+    <link rel="icon" href="img/triangle-half.svg" />
+  </head>
+  <body>
+    <header>
+      <h1>Administration</h1>
+    </header>
+
+    <main>
+      <section class="ny-produkt">
+        <h2>Ny produkt</h2>
+        <form action="" action="POST">
+          <div>
+            <label for="namn">Namn</label>
+            <input
+              type="text"
+              id="namn"
+              autocapitalize="on"
+              maxlength="20"
+              placeholder="Ange namn"
+              required />
+          </div>
+
+          <div>
+            <label for="beskrivning">Beskrivning</label>
+            <textarea
+              name="beskrivning"
+              id="beskrivning"
+              placeholder="Ange beskrivning"
+              required></textarea>
+          </div>
+
+          <div>
+            <label for="produktbild">Bild</label>
+            <input
+              type="file"
+              id="produktbild"
+              name="produktbild"
+              accept="image/png, image/jpeg, image/jpg"
+              required />
+          </div>
+
+          <div>
+            <label for="sku">SKU</label>
+            <input
+              type="text"
+              name="sku"
+              id="sku"
+              maxlength="6"
+              placeholder="Ange SKU"
+              required />
+          </div>
+
+          <div>
+            <label for="pris">Pris</label>
+            <input
+              type="number"
+              name="pris"
+              id="pris"
+              step="10"
+              min="1"
+              max="1000000"
+              required />
+          </div>
+          <div class="checkbox-container">
+            <div>
+              <input type="checkbox" name="tshirts" id="tshirts" required />
+              <label for="tshirts">T-Shirts</label>
+            </div>
+            <div>
+              <input type="checkbox" name="sommar" id="sommar" required />
+              <label for="sommar">Sommar</label>
+            </div>
+            <div>
+              <input type="checkbox" name="byxor" id="byxor" required />
+              <label for="byxor">Byxor</label>
+            </div>
+            <div>
+              <input type="checkbox" name="skor" id="skor" required />
+              <label for="skor">Skor</label>
+            </div>
+          </div>
+          <input type="submit" value="Lägg till" />
+        </form>
+      </section>
+    </main>
+
+    <aside>
+      <h3>Produkter</h3>
+    </aside>
+  </body>
+</html>

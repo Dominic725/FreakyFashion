@@ -1,0 +1,372 @@
+/* Mobile first page */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif;
+  color: aliceblue;
+}
+
+/* UTIL */
+.nowrap {
+    white-space: nowrap;
+  }
+  /* UTIL END */
+
+body {
+  min-height: 100vh;
+  background-color: rgb(93, 60, 60);
+  margin: 1em;
+}
+
+body > * {
+    margin: 1em;
+}
+
+.logo {
+  width: clamp(200px, 100%, 400px);
+}
+
+.search, .search input {
+    width: clamp(100px, 100%, 250px);
+}
+
+.searchicons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  
+  border-radius: 0.9em;
+  padding: 0.2em 1.5em;
+  background: url(/img/search.svg) no-repeat 7px white; /*search-icon that is positioned on the left sideo of the text field*/
+  background-size: 0.9em;
+}
+
+.search input {
+  color: black;
+  border: none;
+}
+
+.checkoutbookmark a, img {
+    width: 40%;
+}
+
+.checkoutbookmark img {
+  margin-left: 0.5em;
+  padding: 0.3em;
+}
+
+.checkoutbookmark img:hover {
+    background-color: rgb(65, 42, 42);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: aliceblue;
+  font-size: 1.1em;
+  width: fit-content;
+}
+
+nav a:hover {
+  color: #302525;
+}
+
+/* hero is 800x500 */
+.hero {
+  margin: 0.5em 0;
+  padding: 0.4em;
+  border-top: 0.2em ridge rgb(158, 2, 2);
+  border-bottom: 0.2em ridge rgb(158, 2, 2);
+  border-radius: 1.5em;
+  text-align: center;
+  font-weight: 550;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 1.5em;
+  margin: 0 auto;
+}
+
+.spots {
+  display: none;
+}
+
+.produkt {
+  position: relative;
+}
+
+.productcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.productcontainer img {
+  width: 100%;
+  border-radius: 2.5em;
+}
+
+.produkt > h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productcontainer > article > div {
+  width: 8%;
+  height: 8%;
+  border: 2px solid red;
+  position: absolute;
+  bottom: 12%;
+  right: 10%;
+  color: red;
+}
+
+.product-details div {
+    max-width: 700px;
+}
+
+.product-details > div > * {
+    margin-bottom: 1rem;
+}
+
+.product-details img {
+    width: 100%;
+    border-radius: 2em;
+}
+
+.product-details button {
+    width: 100%;
+    padding: 1em;
+    background-color: green;
+}
+
+.product-details button:active {
+    background-color: rgb(0, 112, 0);
+    transform: translateY(4px);
+}
+
+.liknande-produkter {
+    display: none;
+}
+
+.liknande-produkter img {
+    width: 100%;
+}
+
+.fraktikoner div {
+  display: flex;
+  align-items: center;
+  font-size: 1.6em;
+  font-weight: 600;
+  list-style: none;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.fraktikoner img {
+  width: 20%;
+  margin-left: 25%;
+}
+
+.navfooter {
+  display: none;
+}
+
+.accordionfooter {
+  background-color: rgb(65, 42, 42);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid black;
+  outline: none;
+  transition: 0.4s;
+  font-size: 1.2em;
+}
+
+.active,
+.accordionfooter:hover {
+  background-color: rgb(137, 88, 88);
+}
+
+.panel {
+  display: flex;
+  padding: 0 18px;
+  background-color: inherit;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel ul {
+  list-style: none;
+}
+
+.panel a {
+  text-decoration: none;
+  margin: 0.5em;
+}
+
+footer > p {
+  text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+
+  .searchicons {
+    justify-content: space-between;
+  }
+
+  nav {
+    flex-direction: row;
+    margin: 0.5em 0;
+  }
+
+  nav a {
+    margin: 0.8em;
+  }
+
+  .productcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8em;
+  }
+
+  .product-details {
+    display: flex;
+    gap: 2em;
+  }
+
+  .product-details img {
+    width: 30%;
+    height: 30%;
+  }
+
+  .product-details button {
+    width: fit-content;
+  }
+
+  .liknande-produkter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4em 1fr;
+    column-gap: 2em;
+    margin: 3em 0;
+  }
+
+  .liknande-produkter > h2:first-child {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    align-self: center;
+    justify-self: center;
+    
+  }
+
+  .fraktikoner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.8em;
+    font-size: 0.8rem;
+  }
+
+  .fraktikoner div {
+    width: 100%;
+  }
+
+  .accordionfooter,
+  .panel {
+    display: none;
+  }
+
+  .navfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1.5em 0;
+    padding: 1.5em;
+    background-color: rgb(65, 42, 42);
+  }
+
+  .navfooter > div > ul > li {
+    list-style: none;
+    margin: 0.8em 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .searchicons {
+    justify-content: space-between;
+  }
+
+  nav {
+    flex-direction: row;
+    margin: 0.5em 0;
+  }
+
+  nav a {
+    margin-right: 0.8em;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .hero img {
+    width: 50%;
+  }
+
+  .spots {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1em 0;
+  }
+
+  .spots img {
+    width: 30%;
+  }
+
+  .spots h2 {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    translate: -50% -50%;
+  }
+
+  .productcontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+  }
+
+  .fraktikoner {
+    display: flex;
+    font-size: 0.7rem;
+  }
+
+  .fraktikoner div {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .accordionfooter,
+  .panel {
+    display: none;
+  }
+}

@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+body {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: 0.08fr 1fr;
+    height: 100vh;
+    background-color: rgb(143, 143, 143);
+}
+
+header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+header, main, aside {
+    padding: 1.2em;
+}
+
+aside {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    max-height: 90%;
+    background-color: rgb(119, 119, 119);
+    border: 2px solid black;
+}
+
+.table-produkter, table, th, td {
+    width: clamp(200px, 100%, 500px);
+}
+
+.table-produkter > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-produkter button {
+    padding: 0.5em;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    font-size: 1em;
+    border-radius: 0.5em;
+    box-shadow: rgb(92, 92, 92) 0.1em 0.1em 0.1em;
+}
+
+.table-produkter button:active {
+    transform: scale(0.9);
+    opacity: 0.9;
+}
+
+.table-produkter button:hover {
+    cursor: pointer;
+}
+
+.table-produkter table, th, td {
+    margin-top: 1em;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: start;
+    font-weight: 550;
+}
+
+.table-produkter thead {
+    background-color: rgb(114, 114, 114);
+}
+
+.table-produkter tbody > tr:nth-of-type(odd) {
+    background-color: grey;
+}
+
+.ny-produkt label {
+    display: block;
+    font-weight: 550;
+    margin: 1em 0;
+}
+
+.checkbox-container > div {
+    display: block;
+}
+
+.checkbox-container label, input {
+    display: inline-block;
+}
+
+.ny-produkt input[type=submit] {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-size: 1em;
+}
